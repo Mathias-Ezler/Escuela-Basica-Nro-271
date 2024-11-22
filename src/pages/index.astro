@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import AboutUs from '../components/AboutUs.astro';
+import Academico from '../components/Academico';
+---
+
+<Layout title="Escuela Básica N° 271">
+  <Header />
+  <main>
+    <section class="relative bg-cover bg-center min-h-[90vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden" style="background-image: url('/fondo1.jpeg');">
+      <!-- Overlay gradient - ajustado para mejor legibilidad en móviles -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
+      
+      <!-- Animated particles - ajustados para diferentes tamaños -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute w-full h-full opacity-20 sm:opacity-30 animate-pulse">
+          <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-blue-500 rounded-full mix-blend-overlay filter blur-3xl"></div>
+          <div class="absolute top-1/2 right-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-purple-500 rounded-full mix-blend-overlay filter blur-3xl"></div>
+        </div>
+      </div>
+    
+      <!-- Main content -->
+      <div class="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 text-center">
+        <div class="max-w-4xl mx-auto space-y-4 sm:space-y-6 md:space-y-8">
+          
+          <!-- Main heading -->
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight px-2">
+            Conéctate con 
+            <span class="block sm:inline mt-2 sm:mt-0">
+              <span class="bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">Nosotros</span>
+            </span>
+          </h1>
+    
+          <!-- Description text -->
+          <p class="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto px-4">
+            Únete a nuestra comunidad educativa y descubre un espacio donde el aprendizaje y el crecimiento personal se encuentran.
+          </p>
+    
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6 sm:mt-8 px-4">
+            <a href="/contacto" 
+               class="w-full sm:w-auto group relative px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 text-white rounded-xl text-base sm:text-lg font-semibold overflow-hidden transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+              <span class="relative z-10">Contacto</span>
+              <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            </a>
+            
+            <a href="/InscripcionFormulario" 
+               class="w-full sm:w-auto group px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white rounded-xl text-base sm:text-lg font-semibold transition-all duration-300 hover:bg-white hover:text-blue-900">
+              Inscripciones
+            </a>
+          </div>
+    
+          <!-- Social proof - responsive grid -->
+          <div class="hidden sm:flex justify-center items-center gap-4 md:gap-8 mt-8 md:mt-12 text-white/80">
+            <div class="text-center">
+              <div class="text-2xl md:text-3xl font-bold">15+</div>
+              <div class="text-xs md:text-sm">Años de Experiencia</div>
+            </div>
+            <div class="h-8 md:h-12 w-px bg-white/20"></div>
+            <div class="text-center">
+              <div class="text-2xl md:text-3xl font-bold">500+</div>
+              <div class="text-xs md:text-sm">Estudiantes</div>
+            </div>
+            <div class="h-8 md:h-12 w-px bg-white/20"></div>
+            <div class="text-center">
+              <div class="text-2xl md:text-3xl font-bold">54</div>
+              <div class="text-xs md:text-sm">Funcionarios</div>
+            </div>
+          </div>
+    
+          <!-- Mobile social proof - grid layout -->
+          <div class="grid grid-cols-3 gap-2 sm:hidden mt-6 text-white/80 px-2">
+            <div class="text-center">
+              <div class="text-xl font-bold">15+</div>
+              <div class="text-xs">Años de Experiencia</div>
+            </div>
+            <div class="text-center">
+              <div class="text-xl font-bold">500+</div>
+              <div class="text-xs">Estudiantes</div>
+            </div>
+            <div class="text-center">
+              <div class="text-xl font-bold">54+</div>
+              <div class="text-xs">Funcionarios</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Decorative bottom wave - ajustado para mejor visualización en móvil -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg class="w-full h-auto" preserveAspectRatio="none" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L60 10C120 20 240 40 360 50C480 60 600 60 720 50C840 40 960 20 1080 15C1200 10 1320 20 1380 25L1440 30V100H1380C1320 100 1200 100 1080 100C960 100 840 100 720 100C600 100 480 100 360 100C240 100 120 100 60 100H0V0Z" fill="white"/>
+        </svg>
+      </div>
+    </section>
+    
+    <style>
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      .animate-fade-in-up {
+        animation: fade-in-up 1s ease-out forwards;
+      }
+    
+      /* Ajustes adicionales para dispositivos móviles */
+      @media (max-width: 640px) {
+        .animate-fade-in-up {
+          animation-duration: 0.8s;
+        }
+      }
+    </style>
+    <AboutUs />
+    <Academico />
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12 mt-9 shadow-lg">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center">
+            <h3 class="text-2xl font-extrabold mb-6 tracking-wide">Escuela Básica N° 271</h3>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-6">
+                <nav class="flex space-x-4">
+                    <a href="/contacto" class="transition-colors duration-300 hover:text-blue-300 px-3 py-2 rounded-md hover:bg-blue-800/50">Contacto</a>
+                    <a href="/politica-privacidad" class="transition-colors duration-300 hover:text-blue-300 px-3 py-2 rounded-md hover:bg-blue-800/50">Política de Privacidad</a>
+                    <a href="/terminos-servicio" class="transition-colors duration-300 hover:text-blue-300 px-3 py-2 rounded-md hover:bg-blue-800/50">Términos de Servicio</a>
+                </nav>
+            </div>
+
+            <p class="text-sm mb-4 text-gray-300">&copy; 2024 Todos los derechos reservados</p>
+            
+            <p class="text-xs text-gray-400">
+                Creado por 
+                <a 
+                    href="https://librefutbol.su/tyc-sports/" 
+                    class="text-white font-semibold hover:text-blue-300 transition-colors duration-300"
+                >
+                    Pixel Pit
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+</Layout>
