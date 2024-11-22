@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Header from '../components/Header';
 import AboutUs from '../components/AboutUs.astro';
-import Academico from '../components/Academico';
+import Academico from '../components/Academico'; 
+import Footer from '../components/footer'; 
 ---
 
 <Layout title="Escuela Básica N° 271">
@@ -45,7 +46,7 @@ import Academico from '../components/Academico';
               <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </a>
             
-            <a href="/InscripcionFormulario" 
+            <a href="/registro" 
                class="w-full sm:w-auto group px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white rounded-xl text-base sm:text-lg font-semibold transition-all duration-300 hover:bg-white hover:text-blue-900">
               Inscripciones
             </a>
@@ -120,34 +121,7 @@ import Academico from '../components/Academico';
     </style>
     <AboutUs />
     <Academico />
+    <Footer />
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12 mt-9 shadow-lg">
-    <div class="container mx-auto px-4 max-w-4xl">
-        <div class="text-center">
-            <h3 class="text-2xl font-extrabold mb-6 tracking-wide">Escuela Básica N° 271</h3>
-            
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-6">
-                <nav class="flex space-x-4">
-                    <a href="/contacto" class="transition-colors duration-300 hover:text-blue-300 px-3 py-2 rounded-md hover:bg-blue-800/50">Contacto</a>
-                    <a href="/politica-privacidad" class="transition-colors duration-300 hover:text-blue-300 px-3 py-2 rounded-md hover:bg-blue-800/50">Política de Privacidad</a>
-                    <a href="/terminos-servicio" class="transition-colors duration-300 hover:text-blue-300 px-3 py-2 rounded-md hover:bg-blue-800/50">Términos de Servicio</a>
-                </nav>
-            </div>
-
-            <p class="text-sm mb-4 text-gray-300">&copy; 2024 Todos los derechos reservados</p>
-            
-            <p class="text-xs text-gray-400">
-                Creado por 
-                <a 
-                    href="https://librefutbol.su/tyc-sports/" 
-                    class="text-white font-semibold hover:text-blue-300 transition-colors duration-300"
-                >
-                    Pixel Pit
-                </a>
-            </p>
-        </div>
-    </div>
-</footer>
 </Layout>

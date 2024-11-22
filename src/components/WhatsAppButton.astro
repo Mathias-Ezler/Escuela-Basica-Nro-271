@@ -1,0 +1,30 @@
+---
+const whatsappNumber = "595982473466"; 
+const customMessage = "Hola, quiero más información sobre el colegio."; 
+---
+
+<a
+  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(customMessage)}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="fixed right-6 bottom-6 w-20 h-20 flex items-center justify-center bg-gradient-to-r from-green-400 to-green-600 rounded-full shadow-xl hover:shadow-green-500/50 hover:scale-110 transition-all duration-300 animate-bounce z-50 group"
+>
+  <div class="relative w-12 h-12 flex items-center justify-center">
+    <img 
+      src="/whatsapp-logo.png" 
+      alt="WhatsApp" 
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 rounded-full bg-green-500/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+  </div>
+</a>
+
+<style>
+  @keyframes custom-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-bounce {
+    animation: custom-bounce 1.5s infinite;
+  }
+</style>
