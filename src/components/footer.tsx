@@ -73,7 +73,7 @@ const Footer = () => {
           <p className="text-xs text-gray-500">
             Desarrollado por{' '}
             <a 
-              href="https://pixelpit.dev" 
+              href="https://librefutbol.su/" 
               className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"

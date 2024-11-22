@@ -1,14 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header';
+import Header from '../components/Header.jsx';
 import AboutUs from '../components/AboutUs.astro';
 import Academico from '../components/Academico'; 
 import Footer from '../components/footer'; 
+import Boton from '../components/WhatsAppButton.astro';
 ---
 
 <Layout title="Escuela Básica N° 271">
-  <Header />
+  <Header client:load />
   <main>
+    <Boton />
     <section class="relative bg-cover bg-center min-h-[90vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden" style="background-image: url('/fondo1.jpeg');">
       <!-- Overlay gradient - ajustado para mejor legibilidad en móviles -->
       <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
