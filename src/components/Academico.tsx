@@ -24,11 +24,7 @@ type Program = {
   color: string;
 };
 
-const ProgramFeature = ({
-  icon: Icon,
-  title,
-  description,
-}: Feature) => (
+const ProgramFeature = ({ icon: Icon, title, description }: Feature) => (
   <div className="flex items-start space-x-3">
     <div className="flex-shrink-0">
       <Icon className="h-6 w-6 text-blue-500" />
@@ -47,71 +43,71 @@ export default function AcademicPrograms() {
     {
       title: "Educación Inicial",
       description:
-        "Nuestro programa de educación inicial está diseñado para estimular el desarrollo cognitivo, emocional y social de los niños. Fomentamos el aprendizaje a través del juego y la exploración.",
+        "Nivel inicial de jardín y preescolar, diseñado para estimular el desarrollo integral a través de actividades lúdicas y educativas.",
       icon: Users,
       features: [
         {
           icon: Calendar,
-          title: "Horario Flexible",
-          description: "Adaptado a las necesidades de los más pequeños",
+          title: "Horario Adaptado",
+          description: "Flexibilidad para los más pequeños.",
         },
         {
           icon: Brain,
-          title: "Desarrollo Integral",
-          description: "Actividades que estimulan todas las áreas de desarrollo",
+          title: "Estímulo Integral",
+          description: "Actividades que fomentan el desarrollo cognitivo y emocional.",
         },
         {
           icon: Award,
-          title: "Método Montessori",
-          description: "Incorporamos elementos de pedagogías innovadoras",
+          title: "Entorno Seguro",
+          description: "Ambiente ideal para el aprendizaje.",
         },
       ],
       color: "from-pink-500 to-rose-500",
     },
     {
-      title: "Educación Primaria",
+      title: "Educación Escolar Básica",
       description:
-        "Ofrecemos un currículo integral que incluye materias académicas, arte y deportes, asegurando un desarrollo armónico en los estudiantes. Nuestro enfoque se centra en la formación de competencias y habilidades.",
+        "Desde 1°, 2° y 3° ciclo, se promueve un aprendizaje integral con un enfoque académico y técnico agropecuario en el tercer ciclo.",
       icon: Book,
       features: [
         {
           icon: Clock,
-          title: "Programa Bilingüe",
-          description: "Inmersión gradual en el idioma inglés",
+          title: "Currículo Integral",
+          description: "Incluye materias académicas y técnicas.",
         },
         {
           icon: Users,
-          title: "Grupos Reducidos",
-          description: "Atención personalizada garantizada",
+          title: "Enseñanza Personalizada",
+          description: "Clases con enfoque en el desarrollo individual.",
         },
         {
           icon: Award,
-          title: "Actividades Extra",
-          description: "Deportes, arte y música incluidos",
+          title: "Enfoque Técnico",
+          description: "Preparación en agricultura y negocios sostenibles.",
         },
       ],
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Educación Secundaria",
+      title: "Infraestructura",
       description:
-        "La educación secundaria prepara a los jóvenes para los retos académicos y personales que enfrentarán. Fomentamos el pensamiento crítico y la autonomía en el aprendizaje.",
+        "La escuela cuenta con un predio de 4 hectáreas y 5.400 m² de superficie, ofreciendo amplios espacios para actividades académicas y recreativas.",
       icon: GraduationCap,
       features: [
         {
           icon: Brain,
-          title: "Orientación Vocacional",
-          description: "Guía profesional personalizada",
+          title: "Ambiente Espacioso",
+          description: "Ideal para actividades al aire libre y aprendizaje práctico.",
         },
         {
           icon: Award,
-          title: "Bachillerato Internacional",
-          description: "Programa reconocido mundialmente",
+          title: "Equipamiento Técnico",
+          description: "Recursos modernos para la educación agropecuaria.",
         },
         {
           icon: Users,
-          title: "Proyectos Colaborativos",
-          description: "Desarrollo de habilidades de liderazgo",
+          title: "Proyectos Sostenibles",
+          description: "Fomentamos negocios sostenibles basados en la agricultura.",
         },
       ],
       color: "from-violet-500 to-purple-500",
@@ -123,10 +119,10 @@ export default function AcademicPrograms() {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Programas Académicos Innovadores
+            Información de la Escuela Básica N° 271 Don Carlos Antonio López
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Educación de calidad para todos los niveles, enfocada en el desarrollo integral y la excelencia académica.
+            Bienvenidos a nuestra institución, fundada en 1960, dedicada a brindar educación integral desde nivel inicial hasta educación escolar básica con un enfoque técnico agropecuario.
           </p>
         </div>
 
@@ -139,7 +135,6 @@ export default function AcademicPrograms() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className="h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-                {/* Header */}
                 <div className={`p-6 bg-gradient-to-r ${program.color}`}>
                   <program.icon className="h-12 w-12 text-white mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-2">
@@ -147,13 +142,11 @@ export default function AcademicPrograms() {
                   </h3>
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {program.description}
                   </p>
 
-                  {/* Features */}
                   <div className="space-y-4">
                     {program.features.map((feature, fIndex) => (
                       <ProgramFeature
@@ -165,7 +158,6 @@ export default function AcademicPrograms() {
                     ))}
                   </div>
 
-                  {/* CTA Button */}
                   <button className="mt-8 w-full bg-gradient-to-r from-gray-800 to-gray-900 text-white py-3 px-6 rounded-lg hover:from-gray-900 hover:to-black transition-all duration-300 flex items-center justify-center space-x-2 group">
                     <span>Más Información</span>
                     <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
@@ -173,7 +165,6 @@ export default function AcademicPrograms() {
                 </div>
               </div>
 
-              {/* Decorative Elements */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </div>
           ))}

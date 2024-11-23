@@ -1,38 +1,44 @@
 ---
+// Importaciones de componentes
 import Layout from '../layouts/Layout.astro';
 import ContactCard from '../components/ContactCard';
 import MapSection from '../components/MapSection';
 import Boton from '../components/WhatsAppButton.astro';
-import Header from "../components/Header"
-import Footer from '../components/Footer.jsx'
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
 ---
 
 <Layout title="Contacto | Escuela Básica N° 271">
-    <Header />
-    <main class="bg-gray-50 min-h-screen pt-20">
-        <Boton /> 
-        <!-- Hero Section -->
-        <div class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
-            <div class="container mx-auto px-4 max-w-6xl">
-                <div class="text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Contacto</h1>
-                    <p class="text-xl text-blue-100 max-w-2xl mx-auto">
-                        Estamos aquí para atenderte y responder todas tus consultas. Encuentra la mejor manera de comunicarte con nosotros.
-                    </p>
-                </div>
-            </div>
-        </div>
+  <main class="bg-gray-50 min-h-screen pt-20">
+    <!-- Header -->
+    <Header client:load />
 
-        <!-- Contact Cards Section -->
-        <div class="container mx-auto px-4 max-w-6xl -mt-10 mb-16">
-            <ContactCard client:load />
-        </div>
+    <!-- Botón flotante -->
+    <Boton />
 
-        <!-- Map Section -->
-        <div class="container mx-auto px-4 max-w-6xl mb-16">
-            <MapSection client:load />
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Contacto</h1>
+          <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+            Estamos aquí para atenderte y responder todas tus consultas. Encuentra la mejor manera de comunicarte con nosotros.
+          </p>
         </div>
-        
-        <Footer />
-    </main>
+      </div>
+    </div>
+
+    <!-- Contact Cards Section -->
+    <div class="container mx-auto px-4 max-w-6xl -mt-10 mb-16">
+      <ContactCard client:load />
+    </div>
+
+    <!-- Map Section -->
+    <div class="container mx-auto px-4 max-w-6xl mb-16">
+      <MapSection client:load />
+    </div>
+
+    <!-- Footer -->
+    <Footer />
+  </main>
 </Layout>

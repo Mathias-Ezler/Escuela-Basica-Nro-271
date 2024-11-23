@@ -14,15 +14,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <p className="text-sm">Av. Principal 1234, Ciudad</p>
+                <p className="text-sm">JOSE L.OVIEDO E/MCAL.ESTIGARRIBIA Y CORDILLERA, Fram</p>
               </div>
               <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
                 <Phone className="h-5 w-5 text-blue-400" />
-                <p className="text-sm">+56 2 2345 6789</p>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
-                <Mail className="h-5 w-5 text-blue-400" />
-                <p className="text-sm">contacto@escuela271.cl</p>
+                <p className="text-sm">0985117223</p>
               </div>
             </div>
           </div>
@@ -54,11 +50,12 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6 text-blue-200">Síguenos</h4>
               <div className="flex space-x-4">
-                <a href="https://facebook.com" className="bg-blue-800 p-2 rounded-full hover:bg-blue-700 transition-colors duration-300">
+                <a href="https://www.facebook.com/share/g/1AsZ2EYH7N/" 
+                  className="bg-blue-800 p-2 rounded-full hover:bg-blue-700 transition-colors duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Facebook className="h-5 w-5" />
-                </a>
-                <a href="https://instagram.com" className="bg-blue-800 p-2 rounded-full hover:bg-blue-700 transition-colors duration-300">
-                  <Instagram className="h-5 w-5" />
                 </a>
               </div>
             </div>

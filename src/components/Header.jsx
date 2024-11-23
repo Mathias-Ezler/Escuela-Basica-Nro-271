@@ -1,26 +1,15 @@
 // Header.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  // Manejar problemas de hidratación
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const navigation = [
     { name: 'Inicio', href: '/' },
     { name: 'Sobre Nosotros', href: '/' },
-    { name: 'Contacto', href: '/' },
+    { name: 'Contacto', href: '/contacto' },
   ];
-
-  // No renderizar nada hasta que el componente esté montado
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
