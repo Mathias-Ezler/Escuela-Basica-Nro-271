@@ -12,10 +12,10 @@ import Boton from '../components/WhatsAppButton.astro';
   <main>
     <Boton />
     <section class="relative bg-cover bg-center min-h-[90vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden" style="background-image: url('/fondo1.jpeg');">
-      <!-- Overlay gradient - ajustado para mejor legibilidad en móviles -->
+      <!-- Overlay gradient -->
       <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
       
-      <!-- Animated particles - ajustados para diferentes tamaños -->
+      <!-- Animated particles -->
       <div class="absolute inset-0 overflow-hidden">
         <div class="absolute w-full h-full opacity-20 sm:opacity-30 animate-pulse">
           <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-blue-500 rounded-full mix-blend-overlay filter blur-3xl"></div>
@@ -24,20 +24,20 @@ import Boton from '../components/WhatsAppButton.astro';
       </div>
     
       <!-- Main content -->
-      <div class="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 text-center">
+      <div class="relative z-10 container mx-auto px-4 sm:px-6 pt-20 sm:pt-32 md:pt-36 text-center">
         <div class="max-w-4xl mx-auto space-y-4 sm:space-y-6 md:space-y-8">
           
           <!-- Main heading -->
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight px-2">
-            Conéctate con 
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight px-2 drop-shadow-lg">
+            Escuela Básica N° 271 
             <span class="block sm:inline mt-2 sm:mt-0">
-              <span class="bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">Nosotros</span>
+              <span class="bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">CAL</span>
             </span>
           </h1>
     
           <!-- Description text -->
-          <p class="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto px-4">
-            Únete a nuestra comunidad educativa y descubre un espacio donde el aprendizaje y el crecimiento personal se encuentran.
+          <p class="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto px-4 font-light">
+            Fundada en el año 1960, cuenta con niveles educativos desde inicial hasta el tercer ciclo, con un enfoque técnico agropecuario e incentivo a negocios sostenibles.
           </p>
     
           <!-- CTA Buttons -->
@@ -90,7 +90,7 @@ import Boton from '../components/WhatsAppButton.astro';
         </div>
       </div>
     
-      <!-- Decorative bottom wave - ajustado para mejor visualización en móvil -->
+      <!-- Decorative bottom wave -->
       <div class="absolute bottom-0 left-0 right-0">
         <svg class="w-full h-auto" preserveAspectRatio="none" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L60 10C120 20 240 40 360 50C480 60 600 60 720 50C840 40 960 20 1080 15C1200 10 1320 20 1380 25L1440 30V100H1380C1320 100 1200 100 1080 100C960 100 840 100 720 100C600 100 480 100 360 100C240 100 120 100 60 100H0V0Z" fill="white"/>
@@ -98,29 +98,6 @@ import Boton from '../components/WhatsAppButton.astro';
       </div>
     </section>
     
-    <style>
-      @keyframes fade-in-up {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    
-      .animate-fade-in-up {
-        animation: fade-in-up 1s ease-out forwards;
-      }
-    
-      /* Ajustes adicionales para dispositivos móviles */
-      @media (max-width: 640px) {
-        .animate-fade-in-up {
-          animation-duration: 0.8s;
-        }
-      }
-    </style>
     <AboutUs />
     <Academico />
     <Footer />
